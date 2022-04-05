@@ -9,9 +9,11 @@ const SocialMedia = () => {
                     <BsGithub />
                 </div>
             </a>
-            <div>
-                <BsLinkedin />
-            </div>
+            <a href="https://www.linkedin.com/in/aarondarwish/">
+                <div>
+                    <BsLinkedin />
+                </div>
+            </a>
         </div>
     );
 }
