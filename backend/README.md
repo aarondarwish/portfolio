@@ -1,8 +1,8 @@
-# Sanity Clean Content Studio
+# Backend
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+For my databse & CDN backend, I used "Sanity Clean Content Studio", which is an open source real-time content editing environment connected to the Sanity servers. Though the actual site is hosted elsewhere.
 
-Now you can do the following things:
+Docs on Sanity:
 
 - [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
 - [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
