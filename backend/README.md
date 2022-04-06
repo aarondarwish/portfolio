@@ -1,6 +1,6 @@
 # Backend
 
-For my databse & CDN backend, I used "Sanity Clean Content Studio", which is an open source real-time content editing environment connected to the Sanity servers. Though the actual site is hosted elsewhere.
+For my databse & CDN backend, I used "Sanity Clean Content Studio", which is an open source real-time content editing environment connected to the Sanity servers. Though the actual site <a href="www.aarondarwish.com">www.aarondarwish.com</a> is hosted elsewhere.
 
 Docs on Sanity:
 
