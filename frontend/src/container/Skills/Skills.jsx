@@ -34,9 +34,7 @@ const Skills = () => {
    The way to do that is by having a sorted and an unsorted array. Take the first element of the sorted, then search for its index in the unsorted array, proceed to recreate the experiences array of objects from that index.
   */
   const sortedExperiences = [];
-  for (let i = 0; i < unsortedYears.length; i++) {
-    sortedExperiences.push(experiences[unsortedYears.indexOf(sortedYears[i])]);
-  }
+  for (let i = 0; i < unsortedYears.length; i++) sortedExperiences.push(experiences[unsortedYears.indexOf(sortedYears[i])]);
 
   return (
     <>
