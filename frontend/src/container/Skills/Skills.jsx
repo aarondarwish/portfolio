@@ -41,8 +41,6 @@ const Skills = () => {
     recreateExperiences.push(experiences[unsortedYears.indexOf(sortedYears[i])]);
   }
 
-  console.log(recreateExperiences);
-
   return (
     <>
       <h2 className='head-text'> <span>Skills</span> & <span>Experience</span></h2>
