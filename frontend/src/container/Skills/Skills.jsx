@@ -23,6 +23,26 @@ const Skills = () => {
     });
   }, []);
 
+  // Get a sorted out years array.
+  let unsortedYears = [];
+  experiences.map((experience) => {
+    unsortedYears.push(experience.year);
+  }
+  );
+  let sortedYears = unsortedYears.map((x) => x);
+  sortedYears.sort().reverse();
+
+  /* Sort out experiences before using it below.
+   You need to search for each element of the array for the years, then proceed to recreate a new object with the correct orders in terms of ascending years.
+   The way to do that is by having a sorted and an unsorted array. Take the first element of the sorted, then search for its index in the unsorted array, proceed to recreate the experiences array of objects from that index.
+  */
+  let recreateExperiences = [];
+  for (let i = 0; i < unsortedYears.length; i++) {
+    recreateExperiences.push(experiences[unsortedYears.indexOf(sortedYears[i])]);
+  }
+
+  console.log(recreateExperiences);
+
   return (
     <>
       <h2 className='head-text'> <span>Skills</span> & <span>Experience</span></h2>
@@ -46,7 +66,7 @@ const Skills = () => {
           ))}
         </motion.div>
         <div className="app__skills-exp">
-          {experiences.map((experience) => (
+          {recreateExperiences.map((experience) => (
             <motion.div
               className="app__skills-exp-item"
               key={experience.year}
