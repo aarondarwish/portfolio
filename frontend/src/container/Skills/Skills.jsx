@@ -25,7 +25,7 @@ const Skills = () => {
 
     // Get a sorted out years array.
     const unsortedYears = [];
-    experiences.map((experience) => unsortedYears.push(experience.year));
+    experiences.map(({ year }) => unsortedYears.push(year));
     const sortedYears = [...unsortedYears];
     sortedYears.sort().reverse();
 
