@@ -4,7 +4,7 @@ name: Release
 # Run on every merge or commit to main
 on: [push]
 
-# Automatically create a GitHub Release, with release details specified (the relevant commits)
+# Automatically create a GitHub Release, with release details specified
 jobs:
   release:
     name: "Release"
