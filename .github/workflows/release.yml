@@ -2,16 +2,28 @@
 name: Release
 
 # Run on every merge or commit to main
-on: [push]
+on:
+  push:
+    # branches to consider in the event; optional, defaults to all
+    branches:
+      - main
 
-# Automatically create a GitHub Release, with release details specified
+# Automatically create a GitHub Release, with release details specified (the relevant commits)
 jobs:
   release:
     name: "Release"
     runs-on: "ubuntu-latest"
     steps:
-      - uses: "marvinpinto/action-automatic-releases@latest"
+      - uses: actions/checkout@v1
+
+      - name: Read package.json
+        uses: dutscher/read-package-json-endpoint-actions@v1.33.7
+        id: package-json-endpoint
+
+      - name: Auto-publish release notes with a tag that mirrors the version number of the package.json
+      - uses: "arvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: latest 
+            #          automatic_release_tag: "${{ github.event.inputs.semver }}" 
+          automatic_release_tag: "${{ steps.package-json-endpoint.outputs.endpoint }}" 
           prerelease: false
